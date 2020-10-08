@@ -67,8 +67,6 @@ using ::rtl::OString;
 
 
 void CreateDocAndTable(Reference<XFrame> &xFrame) {
-    //Reference< XComponentContext > xContext( ::cppu::defaultBootstrap_InitialComponentContext() );
-    //Reference< XMultiComponentFactory > xServiceManager = xContext->getServiceManager();
     Reference<XComponentLoader> rComponentLoader(xFrame, UNO_QUERY);
 
     Reference<XComponent> xComponent = rComponentLoader->loadComponentFromURL(
@@ -81,12 +79,12 @@ void CreateDocAndTable(Reference<XFrame> &xFrame) {
     Reference <XMultiServiceFactory> Document(xTextDocument, UNO_QUERY);
 
     Reference<XText> xText = xTextDocument->getText();
-    Reference<XTextCur> xTextCur = xText->getStart();
+    Reference<XTextCuror> xTextCur = xText->getStart();
 
     int countTables = 2 + std::rand() % 7;
 
     for (int i = 0; i < countTables; i++) {
-        xTextCur->setString(OUString::createFromAscii(("\nTable № " + std::to_string(i + 1)).c_str());
+        xTextCur->setString(OUString::createFromAscii(("\nTable № " + std::to_string(i + 1).c_str());
 
         Reference<XTextTable> xTable(Document->createInstance(OUString::createFromAscii("com.sun.star.text.TextTable")), UNO_QUERY);
         
@@ -98,7 +96,6 @@ void CreateDocAndTable(Reference<XFrame> &xFrame) {
         int rows = 3 + std::rand() % 8;
         int columns = 3 + std::rand() % 4;
         xTable->initialize(rows, columns);
-        xTextCur = xText->getEnd();
         Reference<XTextContent> xTextContent(xTable, UNO_QUERY);
 
         // Insert the table into the document
@@ -109,23 +106,22 @@ void CreateDocAndTable(Reference<XFrame> &xFrame) {
                 std::string index = (char) ('A' + x) + std::to_string(y + 1);
                 Reference<XCell> xCell = xTable->getCellByName(OUString::createFromAscii(index.c_str()));
                 Reference<XText> xTextCell(xCell, UNO_QUERY);
-                Reference<XTextCur> xTextCursor = xTextCell->createTextCursor();
+                Reference<XTextCursor> xTextCursor1 = xTextCell->createTextCursor();
 
                 std::string cell_val = "row_" +std::to_string(x + 1) + " col_" + std::to_string(y + 1);
 
-                xTextCursor->setString(OUString::createFromAscii(cell_val.c_str()));
+                xTextCursor1->setString(OUString::createFromAscii(cell_val.c_str()));
             }
         }
-        xTextCur = xText->getEnd();
     }
 }
 
 void TransposeTable(Reference<XTextTable>& xTable) {
-    Reference<XTextTableCur> cur = xTable->createCursorByCellName(OUString::createFromAscii("A1")); 
+    Reference<XTextTableCursor> xTable = xTable->createCursorByCellName(OUString::createFromAscii("A1")); 
         
     //int c = 1;
     //while (cur->goDown(1, false)) c++;
-    int c = cur->getColumns()->getCount();
+    int c = xTable->getColumns()->getCount();
     int r = xTable->getRows()->getCount();
 
     // r = 1;
