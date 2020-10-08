@@ -173,10 +173,12 @@ void TransposeAllDocument(Reference<XFrame>& xFrame) {
 // XDispatch implementer class "DateTimeWriterDispatchImpl" methods
 void SAL_CALL AddonDispatchImpl::dispatch(const URL& aURL, const Sequence <PropertyValue>& lArgs) throw (RuntimeException) {
     if (aURL.Protocol.equalsAscii("inco.niocs.test.protocolhandler:")) {
+        printf("DEBUG>>> CreatorAndTableProcessingDispatchImpl::dispatch() called. this = %p, command = %s\n", this,
+        OUStringToOString( aURL.Path, RTL_TEXTENCODING_ASCII_US ).getStr()); fflush(stdout);
         if (aURL.Path.equalsAscii("Transpose table")) {
-            TransposeAllDocument(mxFrame, mxContext);
+            TransposeAllDocument(mxFrame);
         } else if (aURL.Path.equalsAscii("Open")) {
-            CreateDocAndTable(mxFrame, mxContext);
+            CreateDocAndTable(mxFrame);
         }
     }
 }
@@ -187,13 +189,8 @@ void SAL_CALL AddonDispatchImpl::addStatusListener(const Reference<XStatusListen
 void SAL_CALL AddonDispatchImpl::removeStatusListener(const Reference<XStatusListener>& xControl, const URL& aURL) throw (RuntimeException) {
 }
 
-/*###############################################################################################
-#################################################################################################
-#################################################################################################
-#################################################################################################
-#################################################################################################
-#################################################################################################
-#################################################################################################*/
+
+
 // ProtocolHandler implementation "Addon" class methods
 
 void SAL_CALL Addon::initialize(const Sequence<Any>& aArguments) throw (Exception, RuntimeException) {
