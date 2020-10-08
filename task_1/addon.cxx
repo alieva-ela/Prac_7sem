@@ -172,7 +172,7 @@ void SAL_CALL AddonDispatchImpl::dispatch(const URL& aURL, const Sequence <Prope
     if (aURL.Protocol.equalsAscii("inco.niocs.test.protocolhandler:")) {
         printf("DEBUG>>> CreatorAndTableProcessingDispatchImpl::dispatch() called. this = %p, command = %s\n", this,
         OUStringToOString( aURL.Path, RTL_TEXTENCODING_ASCII_US ).getStr()); fflush(stdout);
-        if (aURL.Path.equalsAscii("Transpose table")) {
+        if (aURL.Path.equalsAscii("Transpose")) {
             TransposeAllDocument(mxFrame);
         } else if (aURL.Path.equalsAscii("Open")) {
             CreateDocAndTable(mxFrame);
@@ -203,7 +203,7 @@ Reference<XDispatch> SAL_CALL Addon::queryDispatch(const URL& aURL, const ::rtl:
     if (aURL.Protocol.equalsAscii("inco.niocs.test.protocolhandler:")) {
         if (aURL.Path.equalsAscii("Transpose")) {
             xRet = new AddonDispatchImpl(mxFrame, mxContext);
-        } else if (aURL.Path.equalsAscii("Insert")) {
+        } else if (aURL.Path.equalsAscii("Open")) {
             xRet = new AddonDispatchImpl(mxFrame, mxContext);
         }
     }

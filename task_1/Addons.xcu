@@ -62,10 +62,10 @@
         </node>
 
     <node oor:name="OfficeToolBar">
-            <node oor:name="org.openoffice.Office.table.transpositor.toolbar" oor:op="replace">
+            <node oor:name="inco.niocs.test.protocolhandler.toolbar" oor:op="replace">
                 <node oor:name="m1" oor:op="replace">
                     <prop oor:name="URL" oor:type="xs:string">
-                        <value>org.openoffice.Office.table.transpositor:Transpose</value>
+                        <value>inco.niocs.test.protocolhandler:Transpose</value>
                     </prop>
                     <prop oor:name="Title" oor:type="xs:string">
                         <value xml:lang="en-US">Transpose table</value>
@@ -79,7 +79,7 @@
                 </node>
                 <node oor:name="m2" oor:op="replace">
                     <prop oor:name="URL" oor:type="xs:string">
-                        <value>org.openoffice.Office.table.transpositor:Open</value>
+                        <value>inco.niocs.test.protocolhandler:Open</value>
                     </prop>
                     <prop oor:name="ImageIdentifier" oor:type="xs:string">
                         <value/>
