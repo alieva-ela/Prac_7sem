@@ -83,7 +83,10 @@ void CreateDocAndTable(Reference<XFrame> &xFrame) {
     int countTables = 2 + std::rand() % 7;
 
     for (int i = 0; i < countTables; i++) {
-        xTextCursor->setString(OUString::createFromAscii((std::string("\nTable № ") + std::to_string(i + 1)).c_str()));
+        xTextCursor->gotoEnd(false);
+
+        std::string st = std::string("\nTable ") + std::to_string(i + 1);
+        xTextCursor->setString(OUString::createFromAscii(st.c_str()));
 
         Reference<XTextTable> xTable(Document->createInstance(OUString::createFromAscii("com.sun.star.text.TextTable")), UNO_QUERY);
         
