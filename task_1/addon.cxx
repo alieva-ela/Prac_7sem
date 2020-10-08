@@ -79,6 +79,7 @@ void CreateDocAndTable(Reference<XFrame> &xFrame) {
     Reference <XMultiServiceFactory> Document(xTextDocument, UNO_QUERY);
 
     Reference<XText> xText = xTextDocument->getText();
+    Reference<XTextCursor> xTextCursor = xText->createTextCursor();
 
     int countTables = 2 + std::rand() % 7;
 
