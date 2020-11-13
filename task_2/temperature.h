@@ -26,7 +26,6 @@ class TempSecond : public Temp {
     double init_temp;
 public:
     TempSecond(double init_temp = 0.0) : init_temp(init_temp) {
-        std::cout<< "Tem2"<<std::endl;
     }
     
     virtual double getDecreaseTemp(int iteration) override {

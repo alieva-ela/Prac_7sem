@@ -88,27 +88,18 @@ std::vector<uint64_t>* load_file_parseDate(std::vector<uint64_t>* tasks, int& nu
     return tasks;
 }
 
-void init(AbstractSolution *solution, AbstractMutation *mutation, int i, AbstractSolution **Res, int thr){
-    if (i == 1){
-        StartIO<TempFirst> IO(solution, mutation, 1000);
-        *Res = IO.mainAlgorithm();
-    }else if(i == 2){
-        StartIO<TempSecond> IO(solution, mutation, 1000);
-        *Res = IO.mainAlgorithm();
-    }else{
-        StartIO<TempThird> IO(solution, mutation, 1000);
-        *Res = IO.mainAlgorithm();
-    }
-    /*StartIO<temp> IO(solution, mutation, 1000);
-    *Res = IO.mainAlgorithm();*/
+void init(AbstractSolution *solution, AbstractMutation *mutation, Temp *temp, AbstractSolution **Res, int thr){
+    StartIO IO(solution, mutation, temp);
+    *Res = IO.mainAlgorithm();
+    //bestSolution->print();
 }
 
 int main(int argc, char* argv[]) {
 
     //const double INIT_TEMPERATURE = 10000;
     size_t numThreads = sysconf(_SC_NPROCESSORS_ONLN);
-    if (argc == 4) {
-        numThreads = std::atoi(argv[3]);
+    if (argc == 3) {
+        numThreads = std::atoi(argv[2]);
     }
 
 
@@ -130,47 +121,37 @@ int main(int argc, char* argv[]) {
         AbstractSolution* solution = new Solution(tasks, num_proc);
         solution->print();
         AbstractMutation* mutation = new Mutation;
-        //Temp *temp = new TempSecond(1000);
-        double temp = 1000;
-        std::cout<<"Temp"<<std::atoi(argv[2])<<std::endl;
-        if (std::atoi(argv[2]) == 1){
-            StartIO<TempFirst> IO(solution, mutation, temp);
+        Temp *temp = nullptr;
+        if(std::atoi(argv[2]) == 1){
+            StartIO IO(solution, mutation, new TempFirst(1000));
             AbstractSolution* bestSolution = IO.mainAlgorithm();
-            std::cout << "!!!!!!!!!!! 1" << std::endl;
-            std::cout << "!!!!!!!!!!! " << std::endl;
-            std::cout << "!!!!!!!!!!! " << std::endl;
-            std::cout << "!!!!!!!!!!! " << std::endl;
-            std::cout << "!!!!!!!!!!! " << std::endl;
-            std::cout << "BEST SOLUTION: " << std::endl;
             bestSolution->print();
-        }else if(std::atoi(argv[2]) == 2){
-            StartIO<TempSecond> IO(solution, mutation, temp);
+        }else if(std::atoi(argv[2]) == 2)
+           // Temp *temp = new TempSecond(1000);
+            StartIO IO(solution, mutation, new TempSecond(1000));
             AbstractSolution* bestSolution = IO.mainAlgorithm();
-            std::cout << "!!!!!!!!!!! 2" << std::endl;
-            std::cout << "!!!!!!!!!!! " << std::endl;
-            std::cout << "!!!!!!!!!!! " << std::endl;
-            std::cout << "!!!!!!!!!!! " << std::endl;
-            std::cout << "!!!!!!!!!!! " << std::endl;
-            std::cout << "BEST SOLUTION: " << std::endl;
             bestSolution->print();
-        } else{
-            StartIO<TempThird> IO(solution, mutation, temp);
+        }else{
+            //Temp *temp = new TempThird(1000);
+            StartIO IO(solution, mutation, new TempThird(1000));
             AbstractSolution* bestSolution = IO.mainAlgorithm();
-            std::cout << "!!!!!!!!!!! 3 " << std::endl;
-            std::cout << "!!!!!!!!!!! " << std::endl;
-            std::cout << "!!!!!!!!!!! " << std::endl;
-            std::cout << "!!!!!!!!!!! " << std::endl;
-            std::cout << "!!!!!!!!!!! " << std::endl;
-            std::cout << "BEST SOLUTION: " << std::endl;
             bestSolution->print();
         }
+        //StartIO IO(solution, mutation, temp);
+        //AbstractSolution* bestSolution = IO.mainAlgorithm();
+        std::cout << "!!!!!!!!!!! " << std::endl;
+        std::cout << "!!!!!!!!!!! " << std::endl;
+        std::cout << "!!!!!!!!!!! " << std::endl;
+        std::cout << "!!!!!!!!!!! " << std::endl;
+        std::cout << "!!!!!!!!!!! " << std::endl;
+        std::cout << "BEST SOLUTION: " << std::endl;
+        //bestSolution->print();
         auto end = std::chrono::steady_clock::now();
         std::cout << "TIME WORK: "<< std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() << std::endl;
 
     } else {
         std::cout << "Start Parallel"<< std::endl;
         std::cout << "TASK VECTOR: " << std::endl;
-        std::cout<< "Tem_" << std::atoi(argv[2])<<std::endl;
         for (int i = 0; i < tasks->size(); i++)
         {
             std::cout << "ID = " << i << " PROCESSING TIME = " << (*tasks)[i] << " \n";
@@ -181,8 +162,8 @@ int main(int argc, char* argv[]) {
         AbstractSolution* solution = new Solution(tasks, num_proc);
         solution->print();
         AbstractMutation* mutation = new Mutation;
-        //Temp *temp = new TempFirst(1000);
-        //double temp = 1000;
+        Temp *temp = new TempFirst(1000);
+
         auto begin = std::chrono::steady_clock::now();
         std::vector<std::thread> threadPool;
         
@@ -192,9 +173,8 @@ int main(int argc, char* argv[]) {
     
         while (iterationWithoutUpdate <= MAX_ITERATION_WITHOUT_UPDATE) {
             std::vector<AbstractSolution*> Buffer(numThreads);
-            
             for (int i = 0; i < numThreads; i++) {
-                    threadPool.emplace_back(init, solution, mutation, std::atoi(argv[2]), &(Buffer[i]), i);
+                threadPool.emplace_back(init, solution, mutation, temp, &(Buffer[i]), i);
             }
 
             for (auto& i : threadPool) {
@@ -220,7 +200,6 @@ int main(int argc, char* argv[]) {
         }
         std::cout << "BEST SOLUTION: " << std::endl;
         solution->print();
-        std::cout<< "Tem_" << std::atoi(argv[2])<<std::endl;
         auto end = std::chrono::steady_clock::now();
         std::cout << "TIME WORK: "<< std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() << std::endl;
         //printLog(ans, std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count(), PRINT_ANSWER);

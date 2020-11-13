@@ -5,17 +5,18 @@
 #include "mutation.h"
 #include "temperature.h"
 
+template<class T>
 class StartIO {
 private:
     AbstractSolution *curSolution = nullptr;
     AbstractSolution *bestSolution = nullptr;
     AbstractMutation *mut = nullptr;
-    Temp *temp = nullptr;
+    T *temp = nullptr;
     int iterations = 1;
 public:
 	//StartIO() = delete;
-    StartIO(AbstractSolution *initialSolution, AbstractMutation *initialMut, Temp *initialTemp) :
-        curSolution(initialSolution), bestSolution(curSolution->copy_solution()), mut(initialMut), temp(initialTemp) 
+    StartIO(AbstractSolution *initialSolution, AbstractMutation *initialMut, double initialTemp) :
+        curSolution(initialSolution->copy_solution()), bestSolution(curSolution->copy_solution()), mut(initialMut), temp(new T(initialTemp)) 
     {}
 
 
@@ -93,8 +94,6 @@ public:
         }
         return bestSolution;
     }
-
-    // ~StartIO() = default;
 };
 
 #endif
