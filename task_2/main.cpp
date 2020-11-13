@@ -143,6 +143,8 @@ int main(int argc, char* argv[]) {
             std::cout << "!!!!!!!!!!! " << std::endl;
             std::cout << "BEST SOLUTION: " << std::endl;
             bestSolution->print();
+            std::cout<<"INIT_SOLUTION"<<solution->res<<std::endl;
+            std::cout<<"BEST_SOLUTION"<<bestSolution->res<<std::endl;
         }else if(std::atoi(argv[2]) == 2){
             StartIO<TempSecond> IO(solution, mutation, temp);
             AbstractSolution* bestSolution = IO.mainAlgorithm();
@@ -153,6 +155,8 @@ int main(int argc, char* argv[]) {
             std::cout << "!!!!!!!!!!! " << std::endl;
             std::cout << "BEST SOLUTION: " << std::endl;
             bestSolution->print();
+            std::cout<<"INIT_SOLUTION"<<solution->res<<std::endl;
+            std::cout<<"BEST_SOLUTION"<<bestSolution->res<<std::endl;
         } else{
             StartIO<TempThird> IO(solution, mutation, temp);
             AbstractSolution* bestSolution = IO.mainAlgorithm();
@@ -163,6 +167,8 @@ int main(int argc, char* argv[]) {
             std::cout << "!!!!!!!!!!! " << std::endl;
             std::cout << "BEST SOLUTION: " << std::endl;
             bestSolution->print();
+            std::cout<<"INIT_SOLUTION"<<solution->res<<std::endl;
+            std::cout<<"BEST_SOLUTION"<<bestSolution->res<<std::endl;
         }
         auto end = std::chrono::steady_clock::now();
         std::cout << "TIME WORK: "<< std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() << std::endl;
@@ -221,6 +227,7 @@ int main(int argc, char* argv[]) {
         std::cout << "BEST SOLUTION: " << std::endl;
         solution->print();
         std::cout<< "Tem_" << std::atoi(argv[2])<<std::endl;
+        std::cout<<"BEST_SOLUTION :"<<solution->res<<std::endl;
         auto end = std::chrono::steady_clock::now();
         std::cout << "TIME WORK: "<< std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() << std::endl;
         //printLog(ans, std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count(), PRINT_ANSWER);

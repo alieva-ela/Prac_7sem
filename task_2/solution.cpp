@@ -7,6 +7,8 @@
 #include <random>
 #include <chrono>
 
+AbstractSolution::AbstractSolution(){}
+
 void Solution::print(){
     std::cout << "number_of_processors = " << number_of_processors << std::endl;
     std::cout << "res = " << res << std::endl;
@@ -21,12 +23,13 @@ void Solution::print(){
 
 AbstractSolution *Solution::copy_solution() {
 
-    AbstractSolution *new_solution = new Solution(tasks, number_of_processors);
-    new_solution->scheduling = scheduling;
-    *new_solution->tasks = *tasks;
-    new_solution->res = res;
-    new_solution->number_of_processors = number_of_processors;
-    return new_solution;
+    AbstractSolution *new_solution = new Solution();
+new_solution->tasks = new std::vector<uint64_t>();
+new_solution->scheduling = scheduling;
+*new_solution->tasks = *tasks;
+new_solution->res = res;
+new_solution->number_of_processors = number_of_processors;
+return new_solution;
 }
 
 // void Solution::sort_task(){
@@ -110,6 +113,7 @@ void Solution::update() {
 //     }
 //     set_res(init_solution->get_res());
 // }
+
 
 AbstractSolution::AbstractSolution(std::vector<uint64_t>* tasks, int  number_of_processors) {
     //scheduling. sol->scheduling.size();

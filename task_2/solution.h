@@ -16,6 +16,8 @@ public:
     std::vector<std::vector<int>> scheduling;
     std::vector<uint64_t>* tasks;
 
+    AbstractSolution();
+
     AbstractSolution(std::vector<uint64_t>* sol, int number_of_processors);
     virtual void print() = 0;
     virtual AbstractSolution* copy_solution() = 0;
@@ -40,7 +42,7 @@ class Solution : public AbstractSolution {
 
 public:
 
-   // Solution() = delete;
+    Solution(): AbstractSolution() {};
 
     Solution(std::vector<uint64_t>* sol, int number_of_processors) 
     : AbstractSolution(sol, number_of_processors) {}
