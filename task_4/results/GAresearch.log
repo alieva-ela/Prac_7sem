@@ -1,0 +1,200 @@
+Series 0 run 0:
+	Pmut = 0.0004; time = 7.33956 seconds; Generations total 45; Best value = 396
+Series 0 run 1:
+	Pmut = 0.0004; time = 9.51008 seconds; Generations total 55; Best value = 382
+Series 0 run 2:
+	Pmut = 0.0004; time = 5.26432 seconds; Generations total 23; Best value = 391
+Series 0 run 3:
+	Pmut = 0.0004; time = 6.83658 seconds; Generations total 35; Best value = 379
+Series 0 run 4:
+	Pmut = 0.0004; time = 9.94842 seconds; Generations total 57; Best value = 430
+Series 0 run 5:
+	Pmut = 0.0004; time = 3.9176 seconds; Generations total 22; Best value = 404
+Series 0 run 6:
+	Pmut = 0.0004; time = 5.5421 seconds; Generations total 31; Best value = 363
+Series 0 run 7:
+	Pmut = 0.0004; time = 9.86856 seconds; Generations total 57; Best value = 413
+Series 0 run 8:
+	Pmut = 0.0004; time = 6.76924 seconds; Generations total 39; Best value = 427
+Series 0 run 9:
+	Pmut = 0.0004; time = 7.32681 seconds; Generations total 42; Best value = 428
+Series 1 run 0:
+	Pmut = 0.0006; time = 4.00937 seconds; Generations total 23; Best value = 407
+Series 1 run 1:
+	Pmut = 0.0006; time = 9.68386 seconds; Generations total 56; Best value = 401
+Series 1 run 2:
+	Pmut = 0.0006; time = 7.64038 seconds; Generations total 41; Best value = 411
+Series 1 run 3:
+	Pmut = 0.0006; time = 4.58991 seconds; Generations total 26; Best value = 421
+Series 1 run 4:
+	Pmut = 0.0006; time = 6.95043 seconds; Generations total 39; Best value = 419
+Series 1 run 5:
+	Pmut = 0.0006; time = 4.86035 seconds; Generations total 25; Best value = 408
+Series 1 run 6:
+	Pmut = 0.0006; time = 8.75099 seconds; Generations total 50; Best value = 407
+Series 1 run 7:
+	Pmut = 0.0006; time = 5.4091 seconds; Generations total 23; Best value = 387
+Series 1 run 8:
+	Pmut = 0.0006; time = 4.36829 seconds; Generations total 23; Best value = 372
+Series 1 run 9:
+	Pmut = 0.0006; time = 6.51084 seconds; Generations total 38; Best value = 387
+Series 2 run 0:
+	Pmut = 0.0009; time = 4.02541 seconds; Generations total 23; Best value = 380
+Series 2 run 1:
+	Pmut = 0.0009; time = 3.54957 seconds; Generations total 22; Best value = 411
+Series 2 run 2:
+	Pmut = 0.0009; time = 5.28731 seconds; Generations total 33; Best value = 419
+Series 2 run 3:
+	Pmut = 0.0009; time = 4.17179 seconds; Generations total 25; Best value = 398
+Series 2 run 4:
+	Pmut = 0.0009; time = 6.43959 seconds; Generations total 40; Best value = 402
+Series 2 run 5:
+	Pmut = 0.0009; time = 3.66018 seconds; Generations total 20; Best value = 400
+Series 2 run 6:
+	Pmut = 0.0009; time = 6.88331 seconds; Generations total 38; Best value = 413
+Series 2 run 7:
+	Pmut = 0.0009; time = 7.63998 seconds; Generations total 45; Best value = 388
+Series 2 run 8:
+	Pmut = 0.0009; time = 4.79048 seconds; Generations total 26; Best value = 405
+Series 2 run 9:
+	Pmut = 0.0009; time = 3.76659 seconds; Generations total 23; Best value = 400
+Series 3 run 0:
+	Pmut = 0.00135; time = 6.74075 seconds; Generations total 41; Best value = 408
+Series 3 run 1:
+	Pmut = 0.00135; time = 5.57362 seconds; Generations total 34; Best value = 396
+Series 3 run 2:
+	Pmut = 0.00135; time = 9.13611 seconds; Generations total 55; Best value = 429
+Series 3 run 3:
+	Pmut = 0.00135; time = 7.90205 seconds; Generations total 48; Best value = 385
+Series 3 run 4:
+	Pmut = 0.00135; time = 5.24522 seconds; Generations total 32; Best value = 428
+Series 3 run 5:
+	Pmut = 0.00135; time = 6.06879 seconds; Generations total 36; Best value = 387
+Series 3 run 6:
+	Pmut = 0.00135; time = 4.59086 seconds; Generations total 28; Best value = 399
+Series 3 run 7:
+	Pmut = 0.00135; time = 4.49282 seconds; Generations total 24; Best value = 376
+Series 3 run 8:
+	Pmut = 0.00135; time = 7.74293 seconds; Generations total 42; Best value = 399
+Series 3 run 9:
+	Pmut = 0.00135; time = 4.21996 seconds; Generations total 24; Best value = 398
+Series 4 run 0:
+	Pmut = 0.002025; time = 7.10848 seconds; Generations total 37; Best value = 416
+Series 4 run 1:
+	Pmut = 0.002025; time = 5.58441 seconds; Generations total 29; Best value = 401
+Series 4 run 2:
+	Pmut = 0.002025; time = 4.14658 seconds; Generations total 22; Best value = 406
+Series 4 run 3:
+	Pmut = 0.002025; time = 4.73529 seconds; Generations total 28; Best value = 422
+Series 4 run 4:
+	Pmut = 0.002025; time = 8.19874 seconds; Generations total 44; Best value = 399
+Series 4 run 5:
+	Pmut = 0.002025; time = 3.65331 seconds; Generations total 22; Best value = 406
+Series 4 run 6:
+	Pmut = 0.002025; time = 8.0788 seconds; Generations total 49; Best value = 395
+Series 4 run 7:
+	Pmut = 0.002025; time = 4.3456 seconds; Generations total 26; Best value = 427
+Series 4 run 8:
+	Pmut = 0.002025; time = 3.70618 seconds; Generations total 22; Best value = 367
+Series 4 run 9:
+	Pmut = 0.002025; time = 9.53989 seconds; Generations total 51; Best value = 402
+Series 5 run 0:
+	Pmut = 0.0030375; time = 4.51186 seconds; Generations total 25; Best value = 413
+Series 5 run 1:
+	Pmut = 0.0030375; time = 4.13693 seconds; Generations total 22; Best value = 402
+Series 5 run 2:
+	Pmut = 0.0030375; time = 4.71743 seconds; Generations total 28; Best value = 400
+Series 5 run 3:
+	Pmut = 0.0030375; time = 9.55945 seconds; Generations total 59; Best value = 398
+Series 5 run 4:
+	Pmut = 0.0030375; time = 4.6894 seconds; Generations total 27; Best value = 398
+Series 5 run 5:
+	Pmut = 0.0030375; time = 3.90858 seconds; Generations total 23; Best value = 382
+Series 5 run 6:
+	Pmut = 0.0030375; time = 5.22247 seconds; Generations total 31; Best value = 393
+Series 5 run 7:
+	Pmut = 0.0030375; time = 5.88817 seconds; Generations total 33; Best value = 413
+Series 5 run 8:
+	Pmut = 0.0030375; time = 6.1018 seconds; Generations total 34; Best value = 425
+Series 5 run 9:
+	Pmut = 0.0030375; time = 7.79988 seconds; Generations total 48; Best value = 406
+Series 6 run 0:
+	Pmut = 0.00455625; time = 4.48902 seconds; Generations total 25; Best value = 368
+Series 6 run 1:
+	Pmut = 0.00455625; time = 7.58735 seconds; Generations total 43; Best value = 394
+Series 6 run 2:
+	Pmut = 0.00455625; time = 5.29292 seconds; Generations total 29; Best value = 400
+Series 6 run 3:
+	Pmut = 0.00455625; time = 6.24562 seconds; Generations total 38; Best value = 389
+Series 6 run 4:
+	Pmut = 0.00455625; time = 8.36091 seconds; Generations total 48; Best value = 383
+Series 6 run 5:
+	Pmut = 0.00455625; time = 8.27319 seconds; Generations total 48; Best value = 421
+Series 6 run 6:
+	Pmut = 0.00455625; time = 7.52429 seconds; Generations total 41; Best value = 407
+Series 6 run 7:
+	Pmut = 0.00455625; time = 4.73764 seconds; Generations total 27; Best value = 401
+Series 6 run 8:
+	Pmut = 0.00455625; time = 13.2434 seconds; Generations total 80; Best value = 407
+Series 6 run 9:
+	Pmut = 0.00455625; time = 6.24549 seconds; Generations total 34; Best value = 384
+Series 7 run 0:
+	Pmut = 0.00683438; time = 8.78319 seconds; Generations total 46; Best value = 405
+Series 7 run 1:
+	Pmut = 0.00683438; time = 4.47886 seconds; Generations total 24; Best value = 391
+Series 7 run 2:
+	Pmut = 0.00683438; time = 4.96702 seconds; Generations total 28; Best value = 430
+Series 7 run 3:
+	Pmut = 0.00683438; time = 8.65449 seconds; Generations total 52; Best value = 412
+Series 7 run 4:
+	Pmut = 0.00683438; time = 4.04146 seconds; Generations total 24; Best value = 382
+Series 7 run 5:
+	Pmut = 0.00683438; time = 5.53766 seconds; Generations total 33; Best value = 395
+Series 7 run 6:
+	Pmut = 0.00683438; time = 4.36368 seconds; Generations total 26; Best value = 377
+Series 7 run 7:
+	Pmut = 0.00683438; time = 4.35454 seconds; Generations total 26; Best value = 375
+Series 7 run 8:
+	Pmut = 0.00683438; time = 9.69041 seconds; Generations total 53; Best value = 401
+Series 7 run 9:
+	Pmut = 0.00683438; time = 8.82328 seconds; Generations total 53; Best value = 391
+Series 8 run 0:
+	Pmut = 0.0102516; time = 5.88252 seconds; Generations total 32; Best value = 378
+Series 8 run 1:
+	Pmut = 0.0102516; time = 3.7544 seconds; Generations total 22; Best value = 378
+Series 8 run 2:
+	Pmut = 0.0102516; time = 9.28415 seconds; Generations total 49; Best value = 396
+Series 8 run 3:
+	Pmut = 0.0102516; time = 5.95546 seconds; Generations total 33; Best value = 391
+Series 8 run 4:
+	Pmut = 0.0102516; time = 3.61674 seconds; Generations total 21; Best value = 395
+Series 8 run 5:
+	Pmut = 0.0102516; time = 3.31299 seconds; Generations total 20; Best value = 430
+Series 8 run 6:
+	Pmut = 0.0102516; time = 6.44619 seconds; Generations total 39; Best value = 463
+Series 8 run 7:
+	Pmut = 0.0102516; time = 5.99193 seconds; Generations total 35; Best value = 408
+Series 8 run 8:
+	Pmut = 0.0102516; time = 5.96151 seconds; Generations total 36; Best value = 401
+Series 8 run 9:
+	Pmut = 0.0102516; time = 4.92732 seconds; Generations total 26; Best value = 365
+Series 9 run 0:
+	Pmut = 0.0153773; time = 4.31615 seconds; Generations total 24; Best value = 405
+Series 9 run 1:
+	Pmut = 0.0153773; time = 4.94337 seconds; Generations total 29; Best value = 411
+Series 9 run 2:
+	Pmut = 0.0153773; time = 4.30183 seconds; Generations total 25; Best value = 382
+Series 9 run 3:
+	Pmut = 0.0153773; time = 5.66886 seconds; Generations total 33; Best value = 413
+Series 9 run 4:
+	Pmut = 0.0153773; time = 4.27386 seconds; Generations total 25; Best value = 411
+Series 9 run 5:
+	Pmut = 0.0153773; time = 3.40669 seconds; Generations total 20; Best value = 394
+Series 9 run 6:
+	Pmut = 0.0153773; time = 3.83593 seconds; Generations total 23; Best value = 366
+Series 9 run 7:
+	Pmut = 0.0153773; time = 4.24562 seconds; Generations total 25; Best value = 414
+Series 9 run 8:
+	Pmut = 0.0153773; time = 3.3988 seconds; Generations total 20; Best value = 375
+Series 9 run 9:
+	Pmut = 0.0153773; time = 7.20899 seconds; Generations total 44; Best value = 432
